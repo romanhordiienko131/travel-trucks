@@ -1,0 +1,12 @@
+.list {
+  display: flex;
+  gap: 2em;
+}
+
+.link {
+  font-weight: var(--fw-medium);
+}
+
+.activeLink {
+  color: var(--clr-button-hover);
+}

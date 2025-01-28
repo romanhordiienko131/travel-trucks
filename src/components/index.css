@@ -42,6 +42,11 @@ svg {
   max-inline-size: 100%;
 }
 
+ul,
+ol {
+  list-style-type: none;
+}
+
 input,
 button,
 textarea,
@@ -51,6 +56,11 @@ select {
 
 button {
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 :root {

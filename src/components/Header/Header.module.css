@@ -1,0 +1,14 @@
+.header {
+  position: relative;
+  background-color: var(--clr-inputs);
+  padding-block: 1.75em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigationContainer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
