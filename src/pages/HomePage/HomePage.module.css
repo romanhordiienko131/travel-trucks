@@ -40,7 +40,7 @@
   padding-block: 1em;
   padding-inline: 3.03em;
 
-  transition: background-color 3ms;
+  transition: background-color 0.3s;
 }
 
 .link:hover {
