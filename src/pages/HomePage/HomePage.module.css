@@ -1,0 +1,48 @@
+.background {
+  position: relative;
+  height: 100vh;
+  background-image: url("/images/home/hero-bg-1x.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi) {
+  .background {
+    background-image: url("/images/home/hero-bg-2x.webp");
+  }
+}
+
+.titleWrapper {
+  color: var(--clr-inputs);
+  margin-bottom: 2.5em;
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 0.33em;
+}
+
+.subTitle {
+  font-size: var(--fs-large);
+  font-weight: var(--fw-bold);
+}
+
+.link {
+  display: inline-block;
+  border-radius: 200px;
+  background-color: var(--clr-button);
+  color: var(--clr-white);
+  font-weight: var(--fw-medium);
+  padding-block: 1em;
+  padding-inline: 3.03em;
+
+  transition: background-color 3ms;
+}
+
+.link:hover {
+  background-color: var(--clr-button-hover);
+}
