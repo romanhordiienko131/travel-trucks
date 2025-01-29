@@ -1,14 +1,18 @@
 .header {
-  position: relative;
   background-color: var(--clr-inputs);
   padding-block: 1.75em;
+}
+
+.headerContainer {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.navigationContainer {
-  position: absolute;
-  inset-inline-start: 50%;
-  transform: translateX(-50%);
+@media screen and (min-width: 33em) {
+  .navigationContainer {
+    position: absolute;
+    inset-inline-start: 50%;
+    transform: translateX(-50%);
+  }
 }
