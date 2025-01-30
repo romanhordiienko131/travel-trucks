@@ -1,6 +1,6 @@
 .background {
   position: relative;
-  block-size: 100vh;
+  block-size: calc(100vh - 72px);
   background-image: url("/images/home/hero-bg-1x.webp");
   background-repeat: no-repeat;
   background-size: cover;

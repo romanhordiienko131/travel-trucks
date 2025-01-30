@@ -1,0 +1,97 @@
+.card {
+  max-inline-size: 55.5rem;
+  border: 1px solid var(--clr-gray-light);
+  border-radius: 20px;
+  padding: 1.5em;
+  display: flex;
+  gap: 1.5em;
+}
+
+.imageWrapper {
+  inline-size: 18.25rem;
+  block-size: 20rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image {
+  block-size: 100%;
+  object-fit: cover;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.namePriceWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-block-end: 0.5em;
+}
+
+.name {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-large);
+}
+
+.price {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-large);
+}
+
+.price::after {
+  content: ".00";
+}
+
+.priceFavoriteWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+}
+
+.ratingLocationWrapper {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+.ratingWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+.locationWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.25em;
+}
+
+.description {
+  inline-size: 32rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--clr-text);
+}
+
+.link {
+  inline-size: fit-content;
+  border-radius: 200px;
+  background-color: var(--clr-button);
+  padding-block: 1em;
+  padding-inline: 2.5em;
+  font-weight: var(--fw-medidum);
+  letter-spacing: -0.01em;
+  color: var(--clr-white);
+
+  transition: background-color 0.3s;
+}
+
+.link:hover {
+  background-color: var(--clr-button-hover);
+}
