@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getAllCampers } from "./operations";
+import { getCampers } from "./operations";
 
 const campersSlice = createSlice({
   name: "campers",
@@ -7,7 +7,7 @@ const campersSlice = createSlice({
     campers: [],
   },
   extraReducers: (builder) => {
-    builder.addCase(getAllCampers.fulfilled, (state, action) => {
+    builder.addCase(getCampers.fulfilled, (state, action) => {
       state.campers = action.payload.items;
     });
   },

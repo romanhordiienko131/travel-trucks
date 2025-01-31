@@ -1,0 +1,15 @@
+.input {
+  border: none;
+  border-radius: 12px;
+  background-color: var(--clr-inputs);
+  background-image: url("/svg/map.svg");
+  background-repeat: no-repeat;
+  background-position: 1.25em center;
+  padding-block: 1em;
+  padding-inline: 1.25em;
+  padding-inline-start: 3em;
+}
+
+.input::placeholder {
+  color: var(--clr-gray);
+}

@@ -1,0 +1,62 @@
+.heading {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-medium);
+  margin-block-end: 1.2em;
+}
+
+.line {
+  opacity: 30%;
+  color: var(--clr-gray-light);
+  margin-block-end: 1.5em;
+}
+
+.list {
+  max-inline-size: 22.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.75em;
+  row-gap: 0.5em;
+}
+
+.box {
+  position: relative;
+  inline-size: 7rem;
+  block-size: 6rem;
+  border: 1px solid var(--clr-gray-light);
+  border-radius: 12px;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box .radio {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  block-size: 100%;
+  inline-size: 100%;
+}
+
+.box:has(> .radio:checked) {
+  border-color: var(--clr-button);
+}
+
+.iconNameWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  margin-block-end: 0.5em;
+}
+
+.name {
+  max-inline-size: 5rem;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: var(--fw-medium);
+  letter-spacing: -0.01em;
+}

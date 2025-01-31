@@ -1,50 +1,50 @@
 import s from "./Equipment.module.css";
 
 const Equipment = ({ name, type }) => {
-  function getIconUrl(iconName) {
-    let iconUrl = "";
+  function geticon(iconName) {
+    let icon = "";
 
     switch (iconName) {
       case "Transmission":
-        iconUrl = "/svg/diagram.svg";
+        icon = "/svg/diagram.svg";
         break;
       case "Engine":
-        iconUrl = "/svg/fuel-pump.svg";
+        icon = "/svg/fuel-pump.svg";
         break;
       case "AC":
-        iconUrl = "/svg/wind.svg";
+        icon = "/svg/wind.svg";
         break;
       case "Bathroom":
-        iconUrl = "/svg/shower.svg";
+        icon = "/svg/shower.svg";
         break;
       case "Kitchen":
-        iconUrl = "/svg/cup-hot.svg";
+        icon = "/svg/cup-hot.svg";
         break;
       case "TV":
-        iconUrl = "/svg/tv.svg";
+        icon = "/svg/tv.svg";
         break;
       case "Radio":
-        iconUrl = "/svg/radio.svg";
+        icon = "/svg/radio.svg";
         break;
       case "Refrigerator":
-        iconUrl = "/svg/fridge.svg";
+        icon = "/svg/fridge.svg";
         break;
       case "Microwave":
-        iconUrl = "/svg/microwave.svg";
+        icon = "/svg/microwave.svg";
         break;
       case "Gas":
-        iconUrl = "/svg/gas-stove.svg";
+        icon = "/svg/gas-stove.svg";
         break;
       case "Water":
-        iconUrl = "/svg/water.svg";
+        icon = "/svg/water.svg";
     }
 
-    return iconUrl;
+    return icon;
   }
 
   return (
     <div className={s.equipment}>
-      <img src={getIconUrl(name)} alt={name} width={20} height={20} />
+      <img src={geticon(name)} alt={name} width={20} height={20} />
       {type ? (
         <p className={(s.name, s.type)}>{type}</p>
       ) : (

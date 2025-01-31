@@ -1,0 +1,38 @@
+.location {
+  display: block;
+  margin-block-end: 2.5em;
+}
+
+.locationText {
+  color: var(--clr-gray);
+  margin-block-end: 0.5em;
+}
+
+.filterList {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  margin-block-end: 2.5em;
+}
+
+.filtersText {
+  font-weight: var(--fw-medium);
+  color: var(--clr-text);
+}
+
+.button {
+  border-radius: 200px;
+  background-color: var(--clr-button);
+  padding-block: 1em;
+  padding-inline: 3.53em;
+  font-weight: var(--fw-medium);
+  letter-spacing: -0.01em;
+  color: var(--clr-white);
+
+  transition: background-color 0.3s;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--clr-button-hover);
+}
