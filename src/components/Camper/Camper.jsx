@@ -5,6 +5,7 @@ import CamperName from "../CamperName/CamperName";
 import CamperRating from "../CamperRating/CamperRating";
 import CamperLocation from "../CamperLocation/CamperLocation";
 import CamperPrice from "../CamperPrice/CamperPrice";
+import FavoriteBtn from "../FavoriteBtn/FavoriteBtn";
 
 const Camper = ({ camper }) => {
   return (
@@ -18,7 +19,7 @@ const Camper = ({ camper }) => {
             <CamperName name={camper.name} />
             <div className={s.priceFavoriteWrapper}>
               <CamperPrice price={camper.price} />
-              <img src="/svg/heart.svg" alt="Heart" width={26} height={24} />
+              <FavoriteBtn camper={camper} />
             </div>
           </div>
           <div className={s.ratingLocationWrapper}>

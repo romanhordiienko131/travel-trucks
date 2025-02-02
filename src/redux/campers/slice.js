@@ -9,6 +9,20 @@ const campersSlice = createSlice({
       reviews: [],
       gallery: [],
     },
+    favorites: [],
+  },
+  reducers: {
+    toggleFavorite: (state, action) => {
+      const index = state.favorites.findIndex(
+        (favorite) => favorite.id === action.payload.id
+      );
+
+      if (index > -1) {
+        state.favorites.splice(index, 1);
+      } else {
+        state.favorites.push(action.payload);
+      }
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -21,4 +35,5 @@ const campersSlice = createSlice({
   },
 });
 
+export const { toggleFavorite } = campersSlice.actions;
 export const campersReducer = campersSlice.reducer;
