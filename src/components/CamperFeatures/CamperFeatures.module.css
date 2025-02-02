@@ -1,0 +1,39 @@
+.features {
+  inline-size: 39.438rem;
+  border-radius: 10px;
+  background-color: var(--clr-inputs);
+  padding-block: 2.75em;
+  padding-inline: 3.25em;
+}
+
+.equipmentList {
+  margin-block-end: 6.25em;
+}
+
+.heading {
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-medium);
+  margin-block-end: 1.5em;
+}
+
+.line {
+  color: var(--clr-gray-light);
+  opacity: 30%;
+  margin-block-end: 1.5em;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail {
+  text-transform: capitalize;
+  font-weight: var(--fw-medium);
+}

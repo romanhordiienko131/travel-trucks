@@ -1,49 +1,36 @@
 import { Link } from "react-router-dom";
 import EquipmentList from "../EquipmentList/EquipmentList";
 import s from "./Camper.module.css";
+import CamperName from "../CamperName/CamperName";
+import CamperRating from "../CamperRating/CamperRating";
+import CamperLocation from "../CamperLocation/CamperLocation";
+import CamperPrice from "../CamperPrice/CamperPrice";
 
-const Camper = ({
-  id,
-  imageUrl,
-  name,
-  price,
-  rating,
-  reviews,
-  location,
-  description,
-}) => {
+const Camper = ({ camper }) => {
   return (
     <div className={s.card}>
       <div className={s.imageWrapper}>
-        <img className={s.image} src={imageUrl} alt="Camper" />
+        <img className={s.image} src={camper.gallery[0].thumb} alt="Camper" />
       </div>
       <div className={s.content}>
         <div>
           <div className={s.namePriceWrapper}>
-            <h2 className={s.name}>{name}</h2>
+            <CamperName name={camper.name} />
             <div className={s.priceFavoriteWrapper}>
-              <p className={s.price}>€{price}</p>
+              <CamperPrice price={camper.price} />
               <img src="/svg/heart.svg" alt="Heart" width={26} height={24} />
             </div>
           </div>
           <div className={s.ratingLocationWrapper}>
-            <div className={s.ratingWrapper}>
-              <img src="/svg/star.svg" alt="Star" width={16} height={16} />
-              <p className={s.rating}>
-                {rating} ({reviews.length} Reviews)
-              </p>
-            </div>
-            <div className={s.locationWrapper}>
-              <img src="/svg/map.svg" alt="Map" width={16} height={16} />
-              <p>{location}</p>
-            </div>
+            <CamperRating rating={camper.rating} reviews={camper.reviews} />
+            <CamperLocation location={camper.location} />
           </div>
         </div>
-        <p className={s.description}>{description}</p>
+        <p className={s.description}>{camper.description}</p>
         <div className={s.equipmentList}>
-          <EquipmentList id={id} />
+          <EquipmentList camper={camper} />
         </div>
-        <Link className={s.link} to={`/catalog/${id}`}>
+        <Link target="_blank" className={s.link} to={`/catalog/${camper.id}`}>
           Show more
         </Link>
       </div>

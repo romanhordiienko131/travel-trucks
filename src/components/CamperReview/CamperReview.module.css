@@ -1,0 +1,39 @@
+.author {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-block-end: 1em;
+}
+
+.avatar {
+  inline-size: 3.75rem;
+  block-size: 3.75rem;
+  border-radius: 60px;
+  background-color: var(--clr-badges);
+
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-large);
+  color: var(--clr-button);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nameRatingWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+}
+
+.name {
+  font-weight: var(--fw-medium);
+}
+
+.stars {
+  display: flex;
+}
+
+.comment {
+  color: var(--clr-text);
+}

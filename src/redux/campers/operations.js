@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "../../api/axiosConfig";
 
-export const getCampers = createAsyncThunk(
+export const fetchCampers = createAsyncThunk(
   "campers/fetch",
   async (_, thunkAPI) => {
     try {
@@ -29,6 +29,18 @@ export const getCampers = createAsyncThunk(
       const response = await axios.get("", {
         params,
       });
+      return response.data;
+    } catch (error) {
+      return thunkAPI.rejectWithValue(error);
+    }
+  }
+);
+
+export const getCamperById = createAsyncThunk(
+  "campers/getOne",
+  async (id, thunkAPI) => {
+    try {
+      const response = await axios.get(`${id}`);
       return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error);

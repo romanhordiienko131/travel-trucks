@@ -1,0 +1,6 @@
+.list {
+  max-inline-size: 39.44rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}

@@ -1,0 +1,63 @@
+.container {
+  padding-block-start: 3em;
+  padding-block-end: 5em;
+}
+
+.basicInfo {
+  margin-block-end: 1.75em;
+}
+
+.name {
+  margin-block-end: 0.5em;
+}
+
+.ratingLocationWrapper {
+  display: flex;
+  gap: 1em;
+  margin-block-end: 1em;
+}
+
+.gallery {
+  margin-block-end: 1.75em;
+}
+
+.description {
+  color: var(--clr-text);
+  margin-block-end: 3.75em;
+}
+
+.sectionList {
+  display: flex;
+  gap: 2.5em;
+  margin-block-end: 1.5em;
+}
+
+.divider {
+  max-inline-size: 82rem;
+  color: var(--clr-gray-light);
+  opacity: 30%;
+  margin-block-end: 2.75em;
+}
+
+.sectionBtn {
+  position: relative;
+  background-color: transparent;
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-medium);
+}
+
+.currentSection::after {
+  content: "";
+  position: absolute;
+  z-index: 999;
+  bottom: -28px;
+  display: block;
+  width: 85px;
+  height: 6px;
+  background-color: var(--clr-button);
+}
+
+.sections {
+  display: flex;
+  gap: 2.5em;
+}

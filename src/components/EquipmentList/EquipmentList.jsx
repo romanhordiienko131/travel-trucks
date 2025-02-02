@@ -1,12 +1,7 @@
 import s from "./EquipmentList.module.css";
-import { useSelector } from "react-redux";
-import { selectCampers } from "../../redux/campers/selectors";
 import Equipment from "../Equipment/Equipment";
 
-const EquipmentList = ({ id }) => {
-  const campers = useSelector(selectCampers);
-  const camper = campers.find((camper) => camper.id === id);
-
+const EquipmentList = ({ camper }) => {
   const transmissionAndEngine = [
     {
       name: "Transmission",

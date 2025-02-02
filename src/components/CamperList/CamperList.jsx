@@ -8,31 +8,11 @@ const CamperList = () => {
 
   return (
     <ul className={s.list}>
-      {campers.map(
-        ({
-          id,
-          name,
-          price,
-          rating,
-          location,
-          description,
-          gallery,
-          reviews,
-        }) => (
-          <li key={id}>
-            <Camper
-              id={id}
-              name={name}
-              price={price}
-              rating={rating}
-              location={location}
-              description={description}
-              imageUrl={gallery[0].thumb}
-              reviews={reviews}
-            />
-          </li>
-        )
-      )}
+      {campers.map((camper) => (
+        <li key={camper.id}>
+          <Camper camper={camper} />
+        </li>
+      ))}
     </ul>
   );
 };

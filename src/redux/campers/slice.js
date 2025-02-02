@@ -1,15 +1,23 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getCampers } from "./operations";
+import { fetchCampers, getCamperById } from "./operations";
 
 const campersSlice = createSlice({
   name: "campers",
   initialState: {
     campers: [],
+    currentCamper: {
+      reviews: [],
+      gallery: [],
+    },
   },
   extraReducers: (builder) => {
-    builder.addCase(getCampers.fulfilled, (state, action) => {
-      state.campers = action.payload.items;
-    });
+    builder
+      .addCase(fetchCampers.fulfilled, (state, action) => {
+        state.campers = action.payload.items;
+      })
+      .addCase(getCamperById.fulfilled, (state, action) => {
+        state.currentCamper = action.payload;
+      });
   },
 });
 
