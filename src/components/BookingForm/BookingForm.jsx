@@ -1,8 +1,15 @@
 import s from "./BookingForm.module.css";
 
 const BookingForm = () => {
+  function handleSubmit(event) {
+    event.preventDefault();
+    event.target.reset();
+
+    alert("Camper booked successfully");
+  }
+
   return (
-    <form className={s.form}>
+    <form className={s.form} onSubmit={handleSubmit}>
       <div className={s.text}>
         <h3 className={s.heading}>Book your campervan now</h3>
         <p className={s.description}>
